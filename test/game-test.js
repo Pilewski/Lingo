@@ -23,37 +23,37 @@ describe('Lingo', function(){
      assert.isTrue(answer);
      // yellow
    });
-   it('should check the index of the character in the array', function() {
-     var lingo = new Lingo();
-     var alexArray = lingo.generateWordArray('alex');
-     var index = lingo.getCharIndex(alexArray, 'x');
-     assert.equal(index, 3);
-     // green
+   it('should return an array of five orange tiles when a player guesses a correct word.', function () {
+     var arrayOne = ['a', 'p', 'p', 'l', 'e'];
+     var arrayTwo = ['a', 'p', 'p', 'l', 'e'];
+     var colorArray = checkUserGuess(arrayOne, arrayTwo);
+     assert.equal(colorArray, ['orange', 'orange', 'orange', 'orange', 'orange']);
    });
-   it('should return a color if the character is included in the mystery word', function () {
-     var lingo = new Lingo();
-     var color = lingo.getGridColor('alex', 'z', 3);
-     assert.equal(color, 'red');
+   it('should not return an array of five orange tiles when a player guesses a correct word.', function () {
+     var arrayOne = ['a', 'p', 'p', 'x', 'e'];
+     var arrayTwo = ['a', 'p', 'p', 'l', 'e'];
+     var colorArray = checkUserGuess(arrayOne, arrayTwo);
+     assert.notEqual(colorArray, ['orange', 'orange', 'orange', 'orange', 'orange']);
    });
-   it.skip('should unhide the first letter of the mystery word to the player');
-   it.skip('should allow input from the player in all five open tiles');
-   it.skip('should only be allowed if it is a valid word');
-   it.skip('should display in a new row if input word is valid');
-   it.skip('should  of correct-spot and display in unique styling if a letter is in the correct spot');
-   it.skip('should add a class of incorrect-spot and display in a unique way if a letter is in the mystery word but the incorrect spot');
-   it.skip('should track each guess');
-   it.skip('should run correct-word animation if mystery word is guessed');
-   it.skip('should randomly select a new mystery word if mystery word is guessed');
-   it.skip('should display the first letter of the new mystery word');
-   it.skip('should have a maximum number of guesses');
-   it.skip('should end the game when the player has guessed the maximum number of guesses');
-   it.skip('should display the end-game page to the player when the game is over');
 
-   describe('Timed', function(){
-     it.skip('should start a timer when the game starts');
-     it.skip('should contain a timer that is displayed to the player');
-     it.skip('should contain a timer that counts down each second');
-     it.skip('should track when a word is guessed according to the timer');
-     it.skip('should end the game when the timer has expired');
+   it('should return false if the letter has already been found.', function () {
+     var mysteryarray = ['a', 'p', 'p', 'l', 'e'];
+     var userArray = ['p', 'p', 'p', 'l', 'e'];
+     var character = 'p';
+     assert.equal(letterFound(mysteryarray, userArray, character), false);
+   });
+   it('should return false if the letter has already been found.', function () {
+     var mysteryarray = ['a', 'p', 'p', 'l', 'e'];
+     var userArray = ['p', 'p', 'p', 'l', 'e'];
+     var character = 'p';
+     assert.equal(letterFound(mysteryarray, userArray, character), true);
+   });
+
+   it('should return a yellow tile if a player guesses a correct letter but in the incorrect position and that letter has not already been found.', function () {
+
+   });
+   it('should ', function () {
+   });
+   it('should ', function () {
    });
  });
