@@ -1,32 +1,13 @@
 # LINGO
 
-[Play the game.](https://adam-rice.github.io/Lingo/)
+[Play the game.](https://Pilewski.github.io/Lingo/)
 
 ## Description
 
-Lingo in Javascript and jQuery. This game was built by [Alex Pilewski](https://github.com/Pilewski) and [Adam Rice](https://github.com/adam-rice) as a pair project in Module 1 at the Turing School.
+LINGO is a word game adapted from an game show built in Javascript and jQuery. This game was built by [Alex Pilewski](https://github.com/Pilewski) and [Adam Rice](https://github.com/adam-rice) as a pair project in Module 1 at the Turing School.
 
-## Installation
+## Rules
 
-Clone repository and install dependencies:
-
-```
-$ git clone https://github.com/adam-rice/Lingo.git
-$ cd Lingo
-$ npm install
-```
-
-## Usage
-
-Fire up a development server:
-
-```
-npm start
-```
-
-Once the server is running, you can visit:
-
-* `http://localhost:8080/webpack-dev-server/` to run the application.
-* `http://localhost:8080/webpack-dev-server/test.html` to run the test suite in the browser.
-
-```
+- A five letter word is randomly selected and the first letter is displayed 
+- The user guesses a word. If a word is not guessed correctly, the letters that are correctly placed as well as the letters that are in the word but in the incorrect place are displayed to the user
+- The user has a finite number of guesses and must guess valid dictionary words
